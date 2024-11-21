@@ -14,4 +14,3 @@ function ProjectCard({ title, description, id }) {
 }
 
 export default ProjectCard;
-
