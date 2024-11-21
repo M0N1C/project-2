@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import ProjectCard from "../components/ProjectCard";
+import './ProjectListPage.css';  // Aquí se importa el archivo CSS
+
 
 const API_URL = "https://project-management-api-4641927fee65.herokuapp.com";
 
@@ -27,7 +29,7 @@ function ProjectListPage() {
     <div className="ProjectListPage">
 
       <Link to="/projects/create">
-        <button>Create Project</button>
+        <button>Propose Route</button>
       </Link>     
       
         {projects.map((project) => (
