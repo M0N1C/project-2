@@ -9,7 +9,7 @@ function Navbar() {
       </Link>
 
       <Link to="/projects" className="navbar-link">
-        <button className="navbar-btn">Projects</button>
+        <button className="navbar-btn">Bike Routes</button>
       </Link>
       
       {/* Enlace actualizado para About */}

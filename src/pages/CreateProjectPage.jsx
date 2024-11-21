@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import './CreateProjectPage.css';  // Aquí se importa el archivo CSS
+import './CreateProjectPage.css';  
 
 const API_URL = "https://project-management-api-4641927fee65.herokuapp.com";
 
@@ -26,7 +26,7 @@ function CreateProjectPage() {
 
   return (
     <div className="CreateProjectPage">
-      <h3>Add Project</h3>
+      <h3>Add Route</h3>
 
       <form onSubmit={handleSubmit}>
         <label>Title:</label>
