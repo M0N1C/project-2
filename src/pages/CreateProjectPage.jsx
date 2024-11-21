@@ -1,55 +1,52 @@
 import { useState } from "react";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import './CreateProjectPage.css';  
+import './CreateProjectPage.css'; // Import CSS
 
-const API_URL = "https://project-management-api-4641927fee65.herokuapp.com";
-
-function CreateProjectPage() {
+function CreateProjectPage({ onAddProject }) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    const requestBody = { title, description };
-    axios
-      .post(`${API_URL}/projects`, requestBody)
-      .then(() => {
-        // Una vez que el proyecto sea creado, navega a la lista de proyectos
-        navigate("/projects");
-      })
-      .catch((error) => console.log(error));
+    // Pass the new project data to the parent component
+    onAddProject(title, description);
+
+    // Reset form fields
+    setTitle("");
+    setDescription("");
+
+    // Navigate back to the project list page
+    navigate("/projects");
   };
 
   return (
     <div className="CreateProjectPage">
-      <h3>Add Route</h3>
+      <h3>Create a New Bike Route</h3>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleFormSubmit}>
         <label>Title:</label>
         <input
           type="text"
           name="title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
+          required
         />
 
         <label>Description:</label>
         <textarea
-          type="text"
           name="description"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
+          required
         />
 
-        <button type="submit">Submit</button>
+        <button type="submit">Add Route</button>
       </form>
     </div>
   );
 }
 
 export default CreateProjectPage;
-
