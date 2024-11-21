@@ -1,42 +1,114 @@
+/* Contenedor principal */
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 4rem 2rem;
+  text-align: left; /* Cambiar alineación para dar otro estilo */
+  background: linear-gradient(135deg, #1e293b, #334155);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  font-family: 'Poppins', sans-serif;
+  color: #f1f5f9;
+}
+
+/* Título o cabecera */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #e2e8f0;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Logo principal */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
+.logo {
+  height: 80px;
+  width: 80px;
+  background: linear-gradient(135deg, #f43f5e, #fb7185);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 15px rgba(244, 63, 94, 0.4);
+  transition: transform 400ms ease, box-shadow 300ms ease;
+}
+
+.logo:hover {
+  transform: rotate(10deg) scale(1.2);
+  box-shadow: 0 10px 20px rgba(251, 113, 133, 0.6);
+}
+
+.logo.react:hover {
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  box-shadow: 0 10px 20px rgba(14, 165, 233, 0.6);
+}
+
+/* Animación para los logos */
 @keyframes logo-spin {
-  from {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
     transform: rotate(360deg);
   }
 }
 
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+    animation: logo-spin infinite 8s linear;
   }
 }
 
+/* Tarjetas con rediseño */
 .card {
-  padding: 2em;
+  background: #475569;
+  border-radius: 12px;
+  padding: 2rem;
+  color: #f8fafc;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 300ms ease, box-shadow 300ms ease;
 }
 
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Texto de documentación */
 .read-the-docs {
-  color: #888;
+  color: #cbd5e1;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: color 300ms ease, text-shadow 300ms ease;
+}
+
+.read-the-docs:hover {
+  color: #f43f5e;
+  text-shadow: 0 2px 8px rgba(244, 63, 94, 0.5);
+}
+
+/* Pie de página */
+/* footer {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #94a3b8;
+} */
+
+.App {
+  position: relative;
+  height: 100vh;
 }

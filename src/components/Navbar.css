@@ -1,0 +1,36 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e293b; 
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar-link {
+    margin: 0 1rem;
+    text-decoration: none; 
+  }
+  
+  .navbar-btn {
+    padding: 0.5rem 1.5rem;
+    background-color: #38bdf8; 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .navbar-btn:hover {
+    background-color: #0ea5e9; 
+    transform: scale(1.1); 
+  }
+  
+  .navbar-btn:active {
+    background-color: #0284c7; 
+  }
+  

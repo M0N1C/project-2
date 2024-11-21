@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import './CreateProjectPage.css';  // Aquí se importa el archivo CSS
 
 const API_URL = "https://project-management-api-4641927fee65.herokuapp.com";
 
@@ -10,24 +11,24 @@ function CreateProjectPage() {
 
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {                          // <== ADD
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     const requestBody = { title, description };
     axios
       .post(`${API_URL}/projects`, requestBody)
       .then(() => {
-        // Once the project is created navigate to Project List Page
+        // Una vez que el proyecto sea creado, navega a la lista de proyectos
         navigate("/projects");
       })
       .catch((error) => console.log(error));
-  };  
+  };
 
   return (
     <div className="CreateProjectPage">
       <h3>Add Project</h3>
 
-      <form onSubmit={handleSubmit}> 
+      <form onSubmit={handleSubmit}>
         <label>Title:</label>
         <input
           type="text"
@@ -51,3 +52,4 @@ function CreateProjectPage() {
 }
 
 export default CreateProjectPage;
+
