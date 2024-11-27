@@ -55,7 +55,7 @@ function AboutPage() {
 
       {/* Existing part of AboutPage */}
       <div className="contact-info">
-        <h1>Ironhack 2024, Berlin</h1>
+        <h1>MA 2024, Berlin</h1>
         <p>For inquiries, please fill the form.</p>
       </div>
     </div>
